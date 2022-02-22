@@ -53,6 +53,11 @@ WHERE `phone` IS NULL
 
 <!-- 9. Contare quanti iscritti ci sono stati ogni anno  -->
 
+SELECT YEAR(`enrolment_date`) as`anno`,
+COUNT(*) AS `num_stud`
+FROM `students`
+GROUP BY YEAR(`enrolment_date`)
+
 <!-- 10. Contare gli insegnanti che hanno  l'ufficio  nello stesso edificio -->
 
 <!-- 11. Calcolare la media dei voti di ogni appello  d'esame -->
